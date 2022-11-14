@@ -150,7 +150,7 @@ void loop() {
   if (!digitalRead(A4)){
       uint32_t start = millis();        
       bool needClear = 0;    
-      // если нопка удаление зажаьта в течении 3 сек удаляем все метки
+      // если нопка удаление зажаьта в течении 3 сек выводим все 
       while (!digitalRead(A4)) {   
       if (millis() - start >= 3000) { 
         needClear = true;
