@@ -28,11 +28,6 @@ void setup() {
   pinMode(8, OUTPUT);// зелёная лампочка
   pinMode(2, OUTPUT);// красная лампочка
 
-  // удаление всех меток
-  uint32_t start = millis();        
-  bool needClear = 0;              
-
-  // очищаем все метки если нужно
   if (EEPROM.read(EEPROM_START_ADDR) != EEPROM_KEY){
     for (uint16_t i = 0; i < EEPROM.length(); ++i){
       EEPROM.write(i, 0x00);
