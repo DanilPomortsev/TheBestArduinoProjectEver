@@ -131,7 +131,7 @@ void loop() {
   if (!digitalRead(A5)){
     uint32_t start = millis();        
     bool needClear = 0;    
-    // если нопка удаление зажаьта в течении 3 сек удаляем все метки
+    // если кнопка регистрации зажата в течении 3 сек выводим всё
     while (!digitalRead(A5)) {   
       if (millis() - start >= 5000) { 
         Serial.println("AO");
@@ -145,7 +145,7 @@ void loop() {
   if (!digitalRead(A4)){
       uint32_t start = millis();        
       bool needClear = 0;    
-      // если нопка удаление зажаьта в течении 3 сек выводим все 
+      // если кнопка удаление зажата в течении 3 сек удаляем все 
       while (!digitalRead(A4)) {   
       if (millis() - start >= 3000) { 
         needClear = true;
